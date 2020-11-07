@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Engine"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\vcpkg\;CMake Files\..\..\..\..\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\..\..\..\..\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glm\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\tinyobjloader\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\openal-soft\;CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\gli\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug/main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src"/>
+					<Add directory="C:/VulkanSDK/1.2.148.1/Include"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/AL"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 main"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug/main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src"/>
+					<Add directory="C:/VulkanSDK/1.2.148.1/Include"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include"/>
+					<Add directory="C:/vcpkg/installed/x86-windows/include/AL"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 main/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/glm/glm-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glm\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\glfw3\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/tinyobjloader/tinyobjloader-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/tinyobjloader/tinyobjloader-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/tinyobjloader/tinyobjloader-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/tinyobjloader/tinyobjloader-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/tinyobjloader/tinyobjloader-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/openal-soft/OpenALConfig-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\openal-soft\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/openal-soft/OpenALConfig-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\openal-soft\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/openal-soft/OpenALConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\openal-soft\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/gli/gliConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\gli\"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/../../../../../../../vcpkg/installed/x86-windows/share/gli/gliTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\vcpkg\installed\x86-windows\share\gli\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
