@@ -94,6 +94,57 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanApplication.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanDevice.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanInstance.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanLayerExtension.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanPipeline.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanRenderer.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanSwapChain.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanApplication.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanAttribute.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanDevice.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanInclude.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanInstance.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanLayerExtension.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanPipeline.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanRenderer.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanSwapChain.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/stdafx.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/main.cpp">
 			<Option target="main"/>
 		</Unit>

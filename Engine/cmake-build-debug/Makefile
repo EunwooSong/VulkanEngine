@@ -127,6 +127,195 @@ main\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\build
 .PHONY : main\fast
 
+src\core\Graphic\VulkanApplication.obj: src\core\Graphic\VulkanApplication.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanApplication.obj
+
+# target to build an object file
+src\core\Graphic\VulkanApplication.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanApplication.cpp.obj
+.PHONY : src\core\Graphic\VulkanApplication.cpp.obj
+
+src\core\Graphic\VulkanApplication.i: src\core\Graphic\VulkanApplication.cpp.i
+
+.PHONY : src\core\Graphic\VulkanApplication.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanApplication.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanApplication.cpp.i
+.PHONY : src\core\Graphic\VulkanApplication.cpp.i
+
+src\core\Graphic\VulkanApplication.s: src\core\Graphic\VulkanApplication.cpp.s
+
+.PHONY : src\core\Graphic\VulkanApplication.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanApplication.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanApplication.cpp.s
+.PHONY : src\core\Graphic\VulkanApplication.cpp.s
+
+src\core\Graphic\VulkanDevice.obj: src\core\Graphic\VulkanDevice.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanDevice.obj
+
+# target to build an object file
+src\core\Graphic\VulkanDevice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanDevice.cpp.obj
+.PHONY : src\core\Graphic\VulkanDevice.cpp.obj
+
+src\core\Graphic\VulkanDevice.i: src\core\Graphic\VulkanDevice.cpp.i
+
+.PHONY : src\core\Graphic\VulkanDevice.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanDevice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanDevice.cpp.i
+.PHONY : src\core\Graphic\VulkanDevice.cpp.i
+
+src\core\Graphic\VulkanDevice.s: src\core\Graphic\VulkanDevice.cpp.s
+
+.PHONY : src\core\Graphic\VulkanDevice.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanDevice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanDevice.cpp.s
+.PHONY : src\core\Graphic\VulkanDevice.cpp.s
+
+src\core\Graphic\VulkanInstance.obj: src\core\Graphic\VulkanInstance.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanInstance.obj
+
+# target to build an object file
+src\core\Graphic\VulkanInstance.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanInstance.cpp.obj
+.PHONY : src\core\Graphic\VulkanInstance.cpp.obj
+
+src\core\Graphic\VulkanInstance.i: src\core\Graphic\VulkanInstance.cpp.i
+
+.PHONY : src\core\Graphic\VulkanInstance.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanInstance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanInstance.cpp.i
+.PHONY : src\core\Graphic\VulkanInstance.cpp.i
+
+src\core\Graphic\VulkanInstance.s: src\core\Graphic\VulkanInstance.cpp.s
+
+.PHONY : src\core\Graphic\VulkanInstance.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanInstance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanInstance.cpp.s
+.PHONY : src\core\Graphic\VulkanInstance.cpp.s
+
+src\core\Graphic\VulkanLayerExtension.obj: src\core\Graphic\VulkanLayerExtension.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanLayerExtension.obj
+
+# target to build an object file
+src\core\Graphic\VulkanLayerExtension.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.obj
+.PHONY : src\core\Graphic\VulkanLayerExtension.cpp.obj
+
+src\core\Graphic\VulkanLayerExtension.i: src\core\Graphic\VulkanLayerExtension.cpp.i
+
+.PHONY : src\core\Graphic\VulkanLayerExtension.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanLayerExtension.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.i
+.PHONY : src\core\Graphic\VulkanLayerExtension.cpp.i
+
+src\core\Graphic\VulkanLayerExtension.s: src\core\Graphic\VulkanLayerExtension.cpp.s
+
+.PHONY : src\core\Graphic\VulkanLayerExtension.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanLayerExtension.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.s
+.PHONY : src\core\Graphic\VulkanLayerExtension.cpp.s
+
+src\core\Graphic\VulkanPipeline.obj: src\core\Graphic\VulkanPipeline.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanPipeline.obj
+
+# target to build an object file
+src\core\Graphic\VulkanPipeline.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanPipeline.cpp.obj
+.PHONY : src\core\Graphic\VulkanPipeline.cpp.obj
+
+src\core\Graphic\VulkanPipeline.i: src\core\Graphic\VulkanPipeline.cpp.i
+
+.PHONY : src\core\Graphic\VulkanPipeline.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanPipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanPipeline.cpp.i
+.PHONY : src\core\Graphic\VulkanPipeline.cpp.i
+
+src\core\Graphic\VulkanPipeline.s: src\core\Graphic\VulkanPipeline.cpp.s
+
+.PHONY : src\core\Graphic\VulkanPipeline.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanPipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanPipeline.cpp.s
+.PHONY : src\core\Graphic\VulkanPipeline.cpp.s
+
+src\core\Graphic\VulkanRenderer.obj: src\core\Graphic\VulkanRenderer.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanRenderer.obj
+
+# target to build an object file
+src\core\Graphic\VulkanRenderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanRenderer.cpp.obj
+.PHONY : src\core\Graphic\VulkanRenderer.cpp.obj
+
+src\core\Graphic\VulkanRenderer.i: src\core\Graphic\VulkanRenderer.cpp.i
+
+.PHONY : src\core\Graphic\VulkanRenderer.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanRenderer.cpp.i
+.PHONY : src\core\Graphic\VulkanRenderer.cpp.i
+
+src\core\Graphic\VulkanRenderer.s: src\core\Graphic\VulkanRenderer.cpp.s
+
+.PHONY : src\core\Graphic\VulkanRenderer.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanRenderer.cpp.s
+.PHONY : src\core\Graphic\VulkanRenderer.cpp.s
+
+src\core\Graphic\VulkanSwapChain.obj: src\core\Graphic\VulkanSwapChain.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanSwapChain.obj
+
+# target to build an object file
+src\core\Graphic\VulkanSwapChain.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanSwapChain.cpp.obj
+.PHONY : src\core\Graphic\VulkanSwapChain.cpp.obj
+
+src\core\Graphic\VulkanSwapChain.i: src\core\Graphic\VulkanSwapChain.cpp.i
+
+.PHONY : src\core\Graphic\VulkanSwapChain.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanSwapChain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanSwapChain.cpp.i
+.PHONY : src\core\Graphic\VulkanSwapChain.cpp.i
+
+src\core\Graphic\VulkanSwapChain.s: src\core\Graphic\VulkanSwapChain.cpp.s
+
+.PHONY : src\core\Graphic\VulkanSwapChain.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanSwapChain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanSwapChain.cpp.s
+.PHONY : src\core\Graphic\VulkanSwapChain.cpp.s
+
 src\main.obj: src\main.cpp.obj
 
 .PHONY : src\main.obj
@@ -163,6 +352,27 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... main
+	@echo ... src/core/Graphic/VulkanApplication.obj
+	@echo ... src/core/Graphic/VulkanApplication.i
+	@echo ... src/core/Graphic/VulkanApplication.s
+	@echo ... src/core/Graphic/VulkanDevice.obj
+	@echo ... src/core/Graphic/VulkanDevice.i
+	@echo ... src/core/Graphic/VulkanDevice.s
+	@echo ... src/core/Graphic/VulkanInstance.obj
+	@echo ... src/core/Graphic/VulkanInstance.i
+	@echo ... src/core/Graphic/VulkanInstance.s
+	@echo ... src/core/Graphic/VulkanLayerExtension.obj
+	@echo ... src/core/Graphic/VulkanLayerExtension.i
+	@echo ... src/core/Graphic/VulkanLayerExtension.s
+	@echo ... src/core/Graphic/VulkanPipeline.obj
+	@echo ... src/core/Graphic/VulkanPipeline.i
+	@echo ... src/core/Graphic/VulkanPipeline.s
+	@echo ... src/core/Graphic/VulkanRenderer.obj
+	@echo ... src/core/Graphic/VulkanRenderer.i
+	@echo ... src/core/Graphic/VulkanRenderer.s
+	@echo ... src/core/Graphic/VulkanSwapChain.obj
+	@echo ... src/core/Graphic/VulkanSwapChain.i
+	@echo ... src/core/Graphic/VulkanSwapChain.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
