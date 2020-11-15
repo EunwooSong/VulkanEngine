@@ -5,9 +5,11 @@
 #ifndef ENGINE_VULKANDEVICE_H
 #define ENGINE_VULKANDEVICE_H
 
+#include "VulkanInclude.h"
 
 class VulkanDevice {
-
+public:
+    VkResult CreateDevice();
 };
 
 

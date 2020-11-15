@@ -7,7 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(ROOTSRC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-add_executable(main src/main.cpp src/core/Graphic/VulkanInstance.cpp src/include/VulkanInstance.h src/core/Graphic/VulkanApplication.cpp src/include/VulkanApplication.h src/core/Graphic/VulkanDevice.cpp src/include/VulkanDevice.h src/core/Graphic/VulkanPipeline.cpp src/include/VulkanPipeline.h src/core/Graphic/VulkanRenderer.cpp src/include/VulkanRenderer.h src/core/Graphic/VulkanSwapChain.cpp src/include/VulkanSwapChain.h src/core/Graphic/VulkanLayerExtension.cpp src/include/VulkanLayerExtension.h src/include/VulkanInclude.h src/include/stdafx.h src/include/VulkanAttribute.h)
+add_executable(main src/main.cpp src/core/Graphic/VulkanInstance.cpp src/include/VulkanInstance.h src/core/Graphic/VulkanApplication.cpp src/include/VulkanApplication.h src/core/Graphic/VulkanDevice.cpp src/include/VulkanDevice.h src/core/Graphic/VulkanPipeline.cpp src/include/VulkanPipeline.h src/core/Graphic/VulkanRenderer.cpp src/include/VulkanRenderer.h src/core/Graphic/VulkanSwapChain.cpp src/include/VulkanSwapChain.h src/core/Graphic/VulkanLayerExtension.cpp src/include/VulkanLayerExtension.h src/include/VulkanInclude.h src/include/stdafx.h src/include/EngineAttribute.h)
 
 target_include_directories(main PRIVATE src)
 

@@ -2,13 +2,13 @@
 // Created by EunwooSong on 2020-11-08.
 //
 
-#ifndef ENGINE_VULKANATTRIBUTE_H
-#define ENGINE_VULKANATTRIBUTE_H
+#ifndef ENGINE_ENGINEATTRIBUTE_H
+#define ENGINE_ENGINEATTRIBUTE_H
 
 #include <cstdlib>
 #include <cstdint>
 
-namespace VulkanAttribute {
+namespace EngineAttribute {
     constexpr const char * APPLICATION_NAME = "SHARK_ENGINE_DEMO";
     constexpr const char * APPLICATION_VERSION = "1.0.0";
     constexpr const char * ENGINE_VERSION = "1.0.0";
@@ -25,4 +25,4 @@ namespace VulkanAttribute {
     constexpr const bool enableValidationLayers = DEBUG;
 }
 
-#endif //ENGINE_VULKANATTRIBUTE_H
+#endif //ENGINE_ENGINEATTRIBUTE_H

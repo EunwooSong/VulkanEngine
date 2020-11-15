@@ -11,6 +11,16 @@ public:
     VulkanApplication();
     ~VulkanApplication();
 
+    static VulkanApplication* GetInstance();
+
+    void Initialize();
+    void Prepare();
+    void Update();
+    bool Render();
+    void Release();
+
+private:
+
 };
 
 
