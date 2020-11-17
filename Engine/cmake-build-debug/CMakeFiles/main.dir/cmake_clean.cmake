@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/core/Graphic/VulkanPipeline.cpp.obj"
   "CMakeFiles/main.dir/src/core/Graphic/VulkanRenderer.cpp.obj"
   "CMakeFiles/main.dir/src/core/Graphic/VulkanSwapChain.cpp.obj"
+  "CMakeFiles/main.dir/src/core/Graphic/VulkanWrappers.cpp.obj"
   "CMakeFiles/main.dir/src/main.cpp.obj"
   "main.exe"
   "main.exe.manifest"

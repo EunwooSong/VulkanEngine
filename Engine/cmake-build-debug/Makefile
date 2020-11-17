@@ -316,6 +316,33 @@ src\core\Graphic\VulkanSwapChain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanSwapChain.cpp.s
 .PHONY : src\core\Graphic\VulkanSwapChain.cpp.s
 
+src\core\Graphic\VulkanWrappers.obj: src\core\Graphic\VulkanWrappers.cpp.obj
+
+.PHONY : src\core\Graphic\VulkanWrappers.obj
+
+# target to build an object file
+src\core\Graphic\VulkanWrappers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.obj
+.PHONY : src\core\Graphic\VulkanWrappers.cpp.obj
+
+src\core\Graphic\VulkanWrappers.i: src\core\Graphic\VulkanWrappers.cpp.i
+
+.PHONY : src\core\Graphic\VulkanWrappers.i
+
+# target to preprocess a source file
+src\core\Graphic\VulkanWrappers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.i
+.PHONY : src\core\Graphic\VulkanWrappers.cpp.i
+
+src\core\Graphic\VulkanWrappers.s: src\core\Graphic\VulkanWrappers.cpp.s
+
+.PHONY : src\core\Graphic\VulkanWrappers.s
+
+# target to generate assembly for a file
+src\core\Graphic\VulkanWrappers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.s
+.PHONY : src\core\Graphic\VulkanWrappers.cpp.s
+
 src\main.obj: src\main.cpp.obj
 
 .PHONY : src\main.obj
@@ -373,6 +400,9 @@ help:
 	@echo ... src/core/Graphic/VulkanSwapChain.obj
 	@echo ... src/core/Graphic/VulkanSwapChain.i
 	@echo ... src/core/Graphic/VulkanSwapChain.s
+	@echo ... src/core/Graphic/VulkanWrappers.obj
+	@echo ... src/core/Graphic/VulkanWrappers.i
+	@echo ... src/core/Graphic/VulkanWrappers.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

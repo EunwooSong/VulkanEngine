@@ -17,6 +17,12 @@
 #include <mutex>
 #include <set>
 #include <functional>
-
+#include <string>
+#include <sstream>
+#include <vector>
+#include <iomanip>
+#include <assert.h>
+#include <memory>
+#include <mutex>
 
 #endif //ENGINE_STDAFX_H

@@ -59,7 +59,7 @@ VkResult VulkanLayerAndExtension::GetInstanceLayerProperties() {
     return result;
 }
 
-//제공되는 확장판의 수를 얻기 위함
+// 제공되는 확장판의 수를 얻기 위함
 // 이 함수는 확장판과 확장판의 속성을 인스턴스와 장치 레벨에서 가져온다
 // 유효한 장치 포인터를 보내 장치 레벨의 확장을 가져오거나, NULL을 사용해 인스턴스 레벨의 확장판을 특정해 가져온다
 VkResult VulkanLayerAndExtension::GetExtensionProperties(LayerProperties &layerProps, VkPhysicalDevice *gpu) {
@@ -92,7 +92,7 @@ VkResult VulkanLayerAndExtension::GetExtensionProperties(LayerProperties &layerP
 VkResult VulkanLayerAndExtension::GetDeviceExtensionProperties(VkPhysicalDevice *gpu) {
     VkResult						result;					// Variable to check Vulkan API result status
 
-    // Query all the extensions for each layer and store it.
+    // 각 레이어의 모든 확장판을 쿼리하고 이를 저장
     std::cout << "Device extensions" << std::endl;
     std::cout << "===================" << std::endl;
     VulkanApplication* appObj = VulkanApplication::GetInstance();
@@ -117,4 +117,109 @@ VkResult VulkanLayerAndExtension::GetDeviceExtensionProperties(VkPhysicalDevice 
         }
     }
     return result;
+}
+
+// 입력으로 들어온 레이어 이름이 시스템에서 지원하는 레이어인지 점검
+VkBool32 VulkanLayerAndExtension::AreLayersSupported(std::vector<const char *> &layerNames) {
+    uint32_t checkCount = (uint32_t)layerNames.size();
+    uint32_t layerCount = (uint32_t)layerPropertyList.size();
+    std::vector<const char*> unsupportLayerNames;
+
+    for (uint32_t i = 0; i < checkCount; i++) {
+        VkBool32 isSupported = 0;
+        for (uint32_t j = 0; j < layerCount; j++) {
+            if (!strcmp(layerNames[i], layerPropertyList[j].properties.layerName)) {
+                isSupported = 1;
+            }
+        }
+
+        if (!isSupported) {
+            std::cout << "No Layer support found, removed from layer: " << layerNames[i] << std::endl;
+            unsupportLayerNames.push_back(layerNames[i]);
+        }
+        else {
+            std::cout << "Layer supported: " << layerNames[i] << std::endl;
+        }
+    }
+
+    for (auto i : unsupportLayerNames) {
+        auto it = std::find(layerNames.begin(), layerNames.end(), i);
+        if (it != layerNames.end()) layerNames.erase(it);
+    }
+
+    return true;
+}
+
+VkResult VulkanLayerAndExtension::CreateDebugReportCallback() {
+    VkResult result;
+
+    VulkanApplication* appObj	= VulkanApplication::GetInstance();
+    VkInstance* instance		= &appObj->instanceObj.instance;
+
+    // Get vkCreateDebugReportCallbackEXT API
+    dbgCreateDebugReportCallback = (PFN_vkCreateDebugReportCallbackEXT)vkGetInstanceProcAddr(*instance, "vkCreateDebugReportCallbackEXT");
+    if (!dbgCreateDebugReportCallback) {
+        std::cout << "Error: GetInstanceProcAddr unable to locate vkCreateDebugReportCallbackEXT function." << std::endl;
+        return VK_ERROR_INITIALIZATION_FAILED;
+    }
+    std::cout << "GetInstanceProcAddr loaded dbgCreateDebugReportCallback function\n";
+
+    // Get vkDestroyDebugReportCallbackEXT API
+    dbgDestroyDebugReportCallback = (PFN_vkDestroyDebugReportCallbackEXT)vkGetInstanceProcAddr(*instance, "vkDestroyDebugReportCallbackEXT");
+    if (!dbgDestroyDebugReportCallback) {
+        std::cout << "Error: GetInstanceProcAddr unable to locate vkDestroyDebugReportCallbackEXT function." << std::endl;
+        return VK_ERROR_INITIALIZATION_FAILED;
+    }
+    std::cout << "GetInstanceProcAddr loaded dbgDestroyDebugReportCallback function\n";
+
+    // 디버깅 보고서 제어 구조체를 정의하고, DebugFunction의 참조를 제공
+    // 이 함수는 콘솔에 디버깅 정보 출력
+    dbgReportCreateInfo.sType		= VK_STRUCTURE_TYPE_DEBUG_REPORT_CREATE_INFO_EXT;
+    dbgReportCreateInfo.pfnCallback = DebugCallbackFunc;
+    dbgReportCreateInfo.pUserData	= NULL;
+    dbgReportCreateInfo.pNext		= NULL;
+    dbgReportCreateInfo.flags		= VK_DEBUG_REPORT_WARNING_BIT_EXT |
+                                       VK_DEBUG_REPORT_PERFORMANCE_WARNING_BIT_EXT |
+                                       VK_DEBUG_REPORT_ERROR_BIT_EXT |
+                                       VK_DEBUG_REPORT_DEBUG_BIT_EXT;
+
+    // 디버깅 보고서의 콜백 함수를 생성하고 핸들을 debugReportCallback에 저장
+    result = dbgCreateDebugReportCallback(*instance, &dbgReportCreateInfo, NULL, &debugReportCallback);
+    if (result == VK_SUCCESS) {
+        std::cout << "Debug report callback object created successfully\n";
+    }
+    return result;
+}
+
+void VulkanLayerAndExtension::DestroyDebugReportCallback() {
+    VulkanApplication* appObj = VulkanApplication::GetInstance();
+    VkInstance& instance	= appObj->instanceObj.instance;
+    dbgDestroyDebugReportCallback(instance, debugReportCallback, NULL);
+}
+
+//가져온 디버깅 정보를 보고된 메시지와 함께 디버깅 정보의 유형을 설명한다.
+VkBool32 VulkanLayerAndExtension::DebugCallbackFunc(VkFlags msgFlags, VkDebugReportObjectTypeEXT objType, uint64_t srcObject,
+                                       size_t location, int32_t msgCode, const char *layerPrefix, const char *msg,
+                                       void *userData) {
+        if (msgFlags & VK_DEBUG_REPORT_ERROR_BIT_EXT) {
+            std::cout << "[VK_DEBUG_REPORT] ERROR: [" << layerPrefix << "] Code" << msgCode << ":" << msg << std::endl;
+        }
+        else if (msgFlags & VK_DEBUG_REPORT_WARNING_BIT_EXT) {
+            std::cout << "[VK_DEBUG_REPORT] WARNING: [" << layerPrefix << "] Code" << msgCode << ":" << msg << std::endl;
+        }
+        else if (msgFlags & VK_DEBUG_REPORT_INFORMATION_BIT_EXT) {
+            std::cout << "[VK_DEBUG_REPORT] INFORMATION: [" << layerPrefix << "] Code" << msgCode << ":" << msg << std::endl;
+        }
+        else if (msgFlags & VK_DEBUG_REPORT_PERFORMANCE_WARNING_BIT_EXT) {
+            std::cout << "[VK_DEBUG_REPORT] PERFORMANCE: [" << layerPrefix << "] Code" << msgCode << ":" << msg << std::endl;
+        }
+        else if (msgFlags & VK_DEBUG_REPORT_DEBUG_BIT_EXT) {
+            std::cout << "[VK_DEBUG_REPORT] DEBUG: [" << layerPrefix << "] Code" << msgCode << ":" << msg << std::endl;
+        }
+        else {
+            return VK_FALSE;
+        }
+
+        fflush(stdout);
+        return VK_TRUE;
 }

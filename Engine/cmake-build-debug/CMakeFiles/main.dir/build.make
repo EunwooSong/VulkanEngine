@@ -213,6 +213,25 @@ CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.s /c C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\src\core\Graphic\VulkanLayerExtension.cpp
 <<
 
+CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.obj: CMakeFiles\main.dir\flags.make
+CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.obj: ..\src\core\Graphic\VulkanWrappers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/core/Graphic/VulkanWrappers.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.obj /FdCMakeFiles\main.dir\ /FS -c C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\src\core\Graphic\VulkanWrappers.cpp
+<<
+
+CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/core/Graphic/VulkanWrappers.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\src\core\Graphic\VulkanWrappers.cpp
+<<
+
+CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/core/Graphic/VulkanWrappers.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.s /c C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\src\core\Graphic\VulkanWrappers.cpp
+<<
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles\main.dir\src\main.cpp.obj" \
@@ -222,7 +241,8 @@ main_OBJECTS = \
 "CMakeFiles\main.dir\src\core\Graphic\VulkanPipeline.cpp.obj" \
 "CMakeFiles\main.dir\src\core\Graphic\VulkanRenderer.cpp.obj" \
 "CMakeFiles\main.dir\src\core\Graphic\VulkanSwapChain.cpp.obj" \
-"CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.obj"
+"CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.obj" \
+"CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -235,13 +255,14 @@ main.exe: CMakeFiles\main.dir\src\core\Graphic\VulkanPipeline.cpp.obj
 main.exe: CMakeFiles\main.dir\src\core\Graphic\VulkanRenderer.cpp.obj
 main.exe: CMakeFiles\main.dir\src\core\Graphic\VulkanSwapChain.cpp.obj
 main.exe: CMakeFiles\main.dir\src\core\Graphic\VulkanLayerExtension.cpp.obj
+main.exe: CMakeFiles\main.dir\src\core\Graphic\VulkanWrappers.cpp.obj
 main.exe: CMakeFiles\main.dir\build.make
 main.exe: C:\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib
 main.exe: C:\VulkanSDK\1.2.148.1\Lib32\vulkan-1.lib
 main.exe: C:\vcpkg\installed\x86-windows\debug\lib\tinyobjloader.lib
 main.exe: C:\vcpkg\installed\x86-windows\debug\lib\OpenAL32.lib
 main.exe: CMakeFiles\main.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\main.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\main.dir\objects1.rsp @<<
  /out:main.exe /implib:main.lib /pdb:C:\Users\EunwooSong\Desktop\Git\Vulkan\VulkanEngine\Engine\cmake-build-debug\main.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  C:\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib C:\VulkanSDK\1.2.148.1\Lib32\vulkan-1.lib C:\vcpkg\installed\x86-windows\debug\lib\tinyobjloader.lib C:\vcpkg\installed\x86-windows\debug\lib\OpenAL32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

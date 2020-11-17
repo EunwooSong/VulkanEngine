@@ -115,6 +115,9 @@
 		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanSwapChain.cpp">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanWrappers.cpp">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/EngineAttribute.h">
 			<Option target="main"/>
 		</Unit>
@@ -140,6 +143,9 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanSwapChain.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/VulkanWrappers.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/include/stdafx.h">

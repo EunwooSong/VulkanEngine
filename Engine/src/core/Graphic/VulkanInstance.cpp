@@ -34,11 +34,11 @@ VkResult VulkanInstance::CreateInstance(std::vector<const char *> &layers, std::
     instInfo.flags					= 0;
     instInfo.pApplicationInfo		= &appInfo;
 
-    // Specify the list of layer name to be enabled.
+    // 활성화할 레이어 이름의 목록 지정
     instInfo.enabledLayerCount		= (uint32_t)layers.size();
     instInfo.ppEnabledLayerNames	= layers.size() ? layers.data() : NULL;
 
-    // Specify the list of extensions to be used in the application.
+    // 활성화할 확장판의 목록 지정
     instInfo.enabledExtensionCount	= (uint32_t)extensionNames.size();
     instInfo.ppEnabledExtensionNames = extensionNames.size() ? extensionNames.data() : NULL;
 
@@ -49,5 +49,5 @@ VkResult VulkanInstance::CreateInstance(std::vector<const char *> &layers, std::
 }
 
 void VulkanInstance::DestroyInstance() {
-
+    vkDestroyInstance(instance, NULL);
 }
