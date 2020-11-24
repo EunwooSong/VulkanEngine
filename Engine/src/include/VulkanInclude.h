@@ -5,8 +5,9 @@
 #ifndef ENGINE_VULKANINCLUDE_H
 #define ENGINE_VULKANINCLUDE_H
 
+#define GLFW_INCLUDE_VULKAN
+#include <vulkan/vulkan.h>
 #include <GLFW/glfw3.h>
-#include <Vulkan/vulkan.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 

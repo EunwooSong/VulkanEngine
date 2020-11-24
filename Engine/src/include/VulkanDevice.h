@@ -23,9 +23,17 @@ public:
 
     //
     VkResult CreateDevice(std::vector<const char *>& layers, std::vector<const char *>& extensions);
+
     void DestroyDevice();
+
     void GetPhysicalDeviceQueuesAndProperties();
+
     uint32_t GetGraphicsQueueHandle();
+
+    bool MemoryTypeFromProperties(uint32_t typeBits, VkFlags requirements_mask, uint32_t *typeIndex);
+
+    void GetDeviceQueue();
+
 
 public:
     VkDevice							device;		// Logical device

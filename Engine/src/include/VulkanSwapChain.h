@@ -18,68 +18,94 @@ struct SwapChainBuffer {
     VkImageView view;
 };
 
-//스와프 체인의 private과 public 함수가 사용하는 private 변수들
 struct SwapChainPrivateVariables
 {
-    // Store the image surface capabilities
-    VkSurfaceCapabilitiesKHR	surfCapabilities;
+    // 이미지 화면의 기능 저장
+    VkSurfaceCapabilitiesKHR	    surfCapabilities;
 
-    // Stores the number of present mode support by the implementation
-    uint32_t					presentModeCount;
+    // 프레젠테이션 모드의 수 저장
+    uint32_t					    presentModeCount;
 
-    // Arrays for retrived present modes
-    std::vector<VkPresentModeKHR> presentModes;
+    // 프레젠테이션 모드를 가져올 배열
+    std::vector<VkPresentModeKHR>   presentModes;
 
-    // Size of the swap chain color images
-    VkExtent2D					swapChainExtent;
+    //스와프 체인 색상 이미지의 크기
+    VkExtent2D					    swapChainExtent;
 
-    // Number of color images supported by the implementation
-    uint32_t					desiredNumberOfSwapChainImages;
+    // 지원되는 색상 이미지의 수
+    uint32_t					    desiredNumberOfSwapChainImages;
+    VkSurfaceTransformFlagBitsKHR   preTransform;
 
-    VkSurfaceTransformFlagBitsKHR preTransform;
+    // 스와프 체인 생성을 위한 프레젠테이션 모드의 비트 플래그 저장
+    VkPresentModeKHR			    swapchainPresentMode;
 
-    // Stores present mode bitwise flag for the creation of swap chain
-    VkPresentModeKHR			swapchainPresentMode;
-
-    // The retrived drawing color swap chain images
-    std::vector<VkImage>		swapchainImages;
+    // 가져온 드로잉 생상 스와프 체인 이미지들
+    std::vector<VkImage>		    swapchainImages;
 
     std::vector<VkSurfaceFormatKHR> surfFormats;
 };
 
-//스와프 체인의 private과 public 함수가 사용하는 public 변수들
 struct SwapChainPublicVariables
 {
-    // The logical platform dependent surface object
+    // 플랫폼에 따른 화면 개체
     VkSurfaceKHR surface;
 
-    // Number of buffer image used for swap chain
+    // 스와프 체인에 사용될 버퍼 이미지의 수
     uint32_t swapchainImageCount;
 
-    // Swap chain object
+    // 스와프 체인 개체
     VkSwapchainKHR swapChain;
 
-    // List of color swap chain images
+    // 현재 사용 중인 드로잉 화면의 인덱스
     std::vector<SwapChainBuffer> colorBuffer;
-
-    // Semaphore for sync purpose
     VkSemaphore presentCompleteSemaphore;
-
-    // Current drawing surface index in use
     uint32_t currentColorBuffer;
 
-    // Format of the image
+    // 이미지 포맷
     VkFormat format;
 };
 
 class VulkanSwapChain {
     // Public
 public:
-    VulkanSwapChain(VulkanRenderer* renderer);
+
+    explicit VulkanSwapChain(VulkanRenderer* renderer);
     ~VulkanSwapChain();
-    void intializeSwapChain();
-    void createSwapChain(const VkCommandBuffer& cmd);
-    void destroySwapChain();
+    void InitializeSwapChain();
+    void CreateSwapChain(const VkCommandBuffer& cmd);
+    void DestroySwapChain();
+
+    SwapChainPublicVariables	scPublicVars;
+    PFN_vkQueuePresentKHR		fpQueuePresentKHR;
+    PFN_vkAcquireNextImageKHR	fpAcquireNextImageKHR;
+
+    // Private
+private:
+    VkResult CreateSwapChainExtensions();
+    void GetSupportedFormats();
+    VkResult CreateSurface();
+    uint32_t GetGraphicsQueueWithPresentationSupport();
+    void GetSurfaceCapabilitiesAndPresentMode();
+    void ManagePresentMode();
+    void CreateSwapChainColorImages();
+    void CreateColorImageView(const VkCommandBuffer& cmd);
+
+    // Private member variables
+private:
+    PFN_vkGetPhysicalDeviceSurfaceSupportKHR		fpGetPhysicalDeviceSurfaceSupportKHR;
+    PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR	fpGetPhysicalDeviceSurfaceCapabilitiesKHR;
+    PFN_vkGetPhysicalDeviceSurfaceFormatsKHR		fpGetPhysicalDeviceSurfaceFormatsKHR;
+    PFN_vkGetPhysicalDeviceSurfacePresentModesKHR	fpGetPhysicalDeviceSurfacePresentModesKHR;
+    PFN_vkDestroySurfaceKHR							fpDestroySurfaceKHR;
+
+    // Layer Extensions Debugging
+    PFN_vkCreateSwapchainKHR	fpCreateSwapchainKHR;
+    PFN_vkDestroySwapchainKHR	fpDestroySwapchainKHR;
+    PFN_vkGetSwapchainImagesKHR fpGetSwapchainImagesKHR;
+
+    SwapChainPrivateVariables	scPrivateVars;
+    VulkanRenderer*				rendererObj;	// parent
+    VulkanApplication*			appObj;
 };
 
 

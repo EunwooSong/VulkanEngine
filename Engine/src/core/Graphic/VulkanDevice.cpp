@@ -87,5 +87,25 @@ uint32_t VulkanDevice::GetGraphicsQueueHandle() {
 }
 
 void VulkanDevice::DestroyDevice() {
+    vkDestroyDevice(device, NULL);
+}
 
+bool VulkanDevice::MemoryTypeFromProperties(uint32_t typeBits, VkFlags requirements_mask, uint32_t *typeIndex) {
+    // 이들 속성의 첫 번째 인덱스를 찾기 위해 memtypes 검색
+    for (uint32_t i = 0; i < 32; i++) {
+        if ((typeBits & 1) == 1) {
+            // 유형이 사용 가능할 경우 사용자 속성과 일치하는가?
+            if ((memoryProperties.memoryTypes[i].propertyFlags & requirements_mask) == requirements_mask) {
+                *typeIndex = i;
+                return true;
+            }
+        }
+        typeBits >>= 1;
+    }
+    // 일치하는 메모리 유형이 없음, 실패 반환
+    return false;
+}
+
+void VulkanDevice::GetDeviceQueue() {
+    vkGetDeviceQueue(device, graphicsQueueWithPresentIndex, 0, &queue);
 }

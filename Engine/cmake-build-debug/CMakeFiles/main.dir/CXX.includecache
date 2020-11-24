@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../src/include/EngineAttribute.h
-cstdlib
--
-cstdint
--
-
 ../src/include/VulkanApplication.h
 VulkanInstance.h
 ../src/include/VulkanInstance.h
@@ -19,6 +13,8 @@ VulkanDevice.h
 ../src/include/VulkanDevice.h
 VulkanLayerExtension.h
 ../src/include/VulkanLayerExtension.h
+VulkanRenderer.h
+../src/include/VulkanRenderer.h
 memory
 -
 
@@ -27,9 +23,9 @@ VulkanLayerExtension.h
 ../src/include/VulkanLayerExtension.h
 
 ../src/include/VulkanInclude.h
-GLFW/glfw3.h
+vulkan/vulkan.h
 -
-Vulkan/vulkan.h
+GLFW/glfw3.h
 -
 glm/glm.hpp
 -
@@ -64,11 +60,25 @@ VulkanInclude.h
 vector
 -
 
-C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanApplication.cpp
+../src/include/VulkanRenderer.h
+VulkanInclude.h
+../src/include/VulkanInclude.h
+VulkanSwapChain.h
+../src/include/VulkanSwapChain.h
+
+../src/include/VulkanSwapChain.h
+VulkanInclude.h
+../src/include/VulkanInclude.h
+
+C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/VulkanSwapChain.cpp
+include/VulkanSwapChain.h
+C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/include/VulkanSwapChain.h
 include/VulkanApplication.h
 C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/include/VulkanApplication.h
-include/EngineAttribute.h
-C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/include/EngineAttribute.h
+include/VulkanRenderer.h
+C:/Users/EunwooSong/Desktop/Git/Vulkan/VulkanEngine/Engine/src/core/Graphic/include/VulkanRenderer.h
+GLFW/glfw3.h
+-
 
 C:/VulkanSDK/1.2.148.1/Include/vulkan/vk_platform.h
 stddef.h

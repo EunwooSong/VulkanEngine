@@ -39,8 +39,12 @@ VkResult VulkanInstance::CreateInstance(std::vector<const char *> &layers, std::
     instInfo.ppEnabledLayerNames	= layers.size() ? layers.data() : NULL;
 
     // 활성화할 확장판의 목록 지정
-    instInfo.enabledExtensionCount	= (uint32_t)extensionNames.size();
-    instInfo.ppEnabledExtensionNames = extensionNames.size() ? extensionNames.data() : NULL;
+    uint32_t glfwExtensionCount = 0;
+    const char** glfwExtensions;
+    glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+
+    instInfo.enabledExtensionCount	= glfwExtensionCount;
+    instInfo.ppEnabledExtensionNames = glfwExtensions;
 
     VkResult result = vkCreateInstance(&instInfo, NULL, &instance);
     assert(result == VK_SUCCESS);

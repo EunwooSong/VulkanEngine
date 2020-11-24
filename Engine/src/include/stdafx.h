@@ -5,6 +5,8 @@
 #ifndef ENGINE_STDAFX_H
 #define ENGINE_STDAFX_H
 
+#pragma warning(disable 4819)
+
 #include <iostream>
 #include <array>
 #include <random>
@@ -24,5 +26,30 @@
 #include <assert.h>
 #include <memory>
 #include <mutex>
+
+//DELETE Macro
+#define SAFE_DELETE(p)     \
+    {                      \
+        if (p) {           \
+            delete (p);    \
+            (p) = nullptr; \
+        }                  \
+    }
+
+#define SAFE_DELETE_ARRAY(p) \
+    {                        \
+        if (p) {             \
+            delete[](p);     \
+            (p) = nullptr;   \
+        }                    \
+    }
+
+#define SAFE_RELEASE(p)     \
+    {                       \
+        if (p) {            \
+            (p)->Release(); \
+            (p) = nullptr;  \
+        }                   \
+    }
 
 #endif //ENGINE_STDAFX_H

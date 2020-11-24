@@ -21,9 +21,7 @@ public:
     ~VulkanLayerAndExtension();
 
     VkResult GetInstanceLayerProperties();
-
     VkResult GetExtensionProperties(LayerProperties& layerProps, VkPhysicalDevice* gpu = nullptr);
-
     VkResult GetDeviceExtensionProperties(VkPhysicalDevice* gpu);
 
     VkBool32 AreLayersSupported(std::vector<const char *> &layerNames);

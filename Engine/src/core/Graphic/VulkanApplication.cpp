@@ -2,6 +2,7 @@
 // Created by EunwooSong on 2020-11-08.
 //
 
+#include "include/stdafx.h"
 #include "include/VulkanApplication.h"
 #include "include/EngineAttribute.h"
 
@@ -18,11 +19,12 @@ VulkanApplication::VulkanApplication()
     instanceObj.layerExtension.GetInstanceLayerProperties();
 
     deviceObj = NULL;
+    rendererObj = NULL;
 }
 
 VulkanApplication::~VulkanApplication()
 {
-
+    SAFE_DELETE(rendererObj);
 }
 
 VulkanApplication* VulkanApplication::GetInstance(){
@@ -109,4 +111,25 @@ void VulkanApplication::Initialize()
     if (gpuList.size() > 0) {
         HandShakeWithDevice(&gpuList[0], layerNames, deviceExtensionNames);
     }
+
+    rendererObj = new VulkanRenderer(this, deviceObj);
+
+    rendererObj->Initialize();
+}
+
+bool VulkanApplication::Render() {
+    return rendererObj->Render();
+}
+
+void VulkanApplication::Release() {
+    rendererObj->DestroyDepthBuffer();
+    rendererObj->GetSwapChain()->DestroySwapChain();
+    rendererObj->DestroyCommandBuffer();
+    rendererObj->DestroyCommandPool();
+    rendererObj->DestroyPresentationWindow();
+    deviceObj->DestroyDevice();
+    if (EngineAttribute::DEBUG) {
+        instanceObj.layerExtension.DestroyDebugReportCallback();
+    }
+    instanceObj.DestroyInstance();
 }

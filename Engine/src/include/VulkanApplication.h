@@ -8,6 +8,7 @@
 #include "VulkanInstance.h"
 #include "VulkanDevice.h"
 #include "VulkanLayerExtension.h"
+#include "VulkanRenderer.h"
 
 #include <memory>
 
@@ -22,8 +23,8 @@ public:
     void Initialize();
     void Prepare(){};
     void Update(){};
-    bool Render(){ return true;};
-    void Release(){};
+    bool Render();
+    void Release();
 
     VulkanInstance& GetVulkanInstance() { return instanceObj; }
     VulkanDevice*   GetVulkanDevice()   { return deviceObj; }
@@ -39,6 +40,7 @@ private:
 public:
     VulkanInstance  instanceObj;
     VulkanDevice*   deviceObj;
+    VulkanRenderer* rendererObj;
 };
 
 
